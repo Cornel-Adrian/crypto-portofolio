@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 10% 0px;
+    font-family: 'Sono', sans-serif;
+    border-radius: 40px;
+    box-shadow: 3px 3px rgb(179, 179, 179);
+    padding: 5px;
+    background: #c1cfcf;
+
+
+    .options {
+        display: flex;
+        gap: 10px;
+        #search{
+            border-radius: 15px;
+        }
+        .theme{
+            width: 50px;
+        }
+    }
+}

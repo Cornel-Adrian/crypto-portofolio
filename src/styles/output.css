@@ -1,0 +1,47 @@
+.table {
+  background-color: #c1cfcf;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 15px;
+  padding: 4px;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10% 0px;
+  font-family: "Sono", sans-serif;
+  border-radius: 40px;
+  box-shadow: 3px 3px rgb(179, 179, 179);
+  padding: 5px;
+  background: #c1cfcf;
+}
+.header .options {
+  display: flex;
+  gap: 10px;
+}
+.header .options #search {
+  border-radius: 15px;
+}
+.header .options .theme {
+  width: 50px;
+}
+
+body {
+  width: 100%;
+}
+
+.home {
+  margin: 50px 10% 0px;
+}
+
+/*# sourceMappingURL=output.css.map */

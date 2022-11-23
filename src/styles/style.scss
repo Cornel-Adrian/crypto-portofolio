@@ -1,0 +1,17 @@
+@use 'components/table';
+@use 'components/header';
+
+$primary_color: white;
+$dark_theme_color: black;
+
+$default-margin: 50px 10% 0px;
+
+body {
+    width: 100%;
+}
+
+
+
+.home{
+    margin: $default-margin;
+}
