@@ -9,7 +9,7 @@ function Table() {
   const { order = 'market_cap_desc' } = useParams();
   const { page = '1' } = useParams();
   const { per_page = '50' } = useParams();
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [err, setErr] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -22,7 +22,6 @@ function Table() {
   useEffect(() => {
     async function fetchData() {
       await axios.get(url).then((res) => {
-        console.log(res);
         setData(res.data)
       }).catch((err) => {
         setErr(err);
@@ -37,15 +36,16 @@ function Table() {
   }, [url])
 
 
-  
+
   if (loading) return <h1>Loading ...</h1>
-  if (err) console.log(err);
-
-
+  if (err) {
+    console.log(err);
+    return <h1>Error</h1>
+  }
 
   return (
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -59,7 +59,7 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {data.map((row) => (
+          { data.map((row) => (
             <tr>
               <td>{row.market_cap_rank}</td>
               <td>{row.name}</td>
@@ -72,6 +72,7 @@ function Table() {
             </tr>
           ))
           }
+  
         </tbody>
       </table>
     </div >
