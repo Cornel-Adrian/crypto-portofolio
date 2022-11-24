@@ -4,14 +4,21 @@
   width: 100%;
   border-radius: 15px;
   padding: 4px;
+  overflow: scroll;
 }
 
 th {
   text-align: center;
+  border-bottom: 1px solid #505050;
+  padding: 15px;
+  margin: 14px;
 }
 
 td {
   text-align: center;
+  border-bottom: 1px solid #505050;
+  padding: 15px;
+  margin: 14px;
 }
 
 .header {
